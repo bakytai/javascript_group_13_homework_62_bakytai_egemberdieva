@@ -1,1 +1,15 @@
-<p>platform works!</p>
+<div class="col-3">
+  <h2>Platforms: </h2>
+  <ul class="list-group">
+    <li class="list-group-item"
+        (click)="onClick()"
+        *ngFor="let name of platformsName; let i = index"
+        [routerLink]="[i]"
+        routerLinkActive="active"
+        #nameLi
+    >{{ name }}</li>
+  </ul>
+</div>
+<app-game-item *ngFor="let game of newArray"
+[game]="game"></app-game-item>
+
