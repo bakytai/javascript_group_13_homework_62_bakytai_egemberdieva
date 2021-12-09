@@ -1,11 +1,11 @@
 <div class="d-flex">
-  <div class=" d-flex flex-wrap" style="width: 70%;">
+  <div class=" d-flex flex-wrap" style="width: 70%;" *ngFor="let game of games">
     <div class="card m-3" appShadowHover style="width: 10rem;">
       <img [src]="game.imgUrl" class="card-img-top" alt="...">
       <div class="card-body">
         <a
           class="list-group-item list-group-item-action"
-          routerLinkActive="active">{{ game.name }}</a>
+          >{{ game.name }}</a>
       </div>
     </div>
   </div>

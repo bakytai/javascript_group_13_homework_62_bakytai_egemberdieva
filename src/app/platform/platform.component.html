@@ -1,15 +1,14 @@
-<div class="col-3">
-  <h2>Platforms: </h2>
-  <ul class="list-group">
-    <li class="list-group-item"
-        (click)="onClick()"
-        *ngFor="let name of platformsName; let i = index"
-        [routerLink]="[i]"
-        routerLinkActive="active"
-        #nameLi
-    >{{ name }}</li>
-  </ul>
+<div class="d-flex justify-content-around">
+  <div class="col-3">
+    <h2>Platforms: </h2>
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let name of platformsName"
+          routerLinkActive="active" [routerLink]="[name]">{{ name }}</li>
+    </ul>
+  </div>
+  <div class="col-5">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-<app-game-item *ngFor="let game of newArray"
-[game]="game"></app-game-item>
 
